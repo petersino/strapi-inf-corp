@@ -4,7 +4,7 @@
   "info": {
     "singularName": "subcategoria",
     "pluralName": "subcategorias",
-    "displayName": "Subcategoria",
+    "displayName": "subcategoria",
     "description": ""
   },
   "options": {
@@ -12,17 +12,17 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Nombre": {
+    "nombre": {
       "type": "string",
       "required": true,
       "unique": true
     },
-    "URL": {
+    "slug": {
       "type": "uid",
-      "targetField": "Nombre",
-      "required": true
+      "required": true,
+      "targetField": "nombre"
     },
-    "Imagen": {
+    "imagen": {
       "type": "media",
       "multiple": false,
       "required": true,

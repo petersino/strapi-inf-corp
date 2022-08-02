@@ -4,7 +4,7 @@
   "info": {
     "singularName": "producto",
     "pluralName": "productos",
-    "displayName": "Producto",
+    "displayName": "producto",
     "description": ""
   },
   "options": {
@@ -12,31 +12,25 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Nombre": {
+    "nombre": {
       "type": "string",
       "required": true,
       "unique": true
     },
-    "Descripcion": {
+    "descripcion": {
       "type": "text"
     },
-    "Medidas": {
+    "medidas": {
       "type": "string"
     },
-    "Incluye": {
-      "type": "richtext"
-    },
-    "Garantia": {
-      "type": "richtext"
-    },
-    "Capacidad": {
+    "capacidad": {
       "type": "string"
     },
-    "URL": {
+    "slug": {
       "type": "uid",
-      "targetField": "Nombre"
+      "targetField": "nombre"
     },
-    "Imagen": {
+    "imagen": {
       "type": "media",
       "multiple": false,
       "required": true,
@@ -44,7 +38,7 @@
         "images"
       ]
     },
-    "Galeria": {
+    "galeria": {
       "type": "media",
       "multiple": true,
       "required": true,
@@ -57,6 +51,12 @@
       "relation": "manyToOne",
       "target": "api::subcategoria.subcategoria",
       "inversedBy": "productos"
+    },
+    "incluye": {
+      "type": "json"
+    },
+    "garantia": {
+      "type": "json"
     }
   }
 }
